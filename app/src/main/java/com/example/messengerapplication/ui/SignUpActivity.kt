@@ -42,7 +42,7 @@ class SignUpActivity : AppCompatActivity() {
         }
     }
 
-    //sign up and add user to database
+    //check sign up details and add user to database
     private fun signUp(name: String, email: String, password: String){
         mAuth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
