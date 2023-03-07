@@ -11,9 +11,10 @@ import com.example.messengerapplication.ui.ChatActivity
 import com.example.messengerapplication.R
 import com.example.messengerapplication.model.User
 
+
+//providing the view with data in the format it needs to be displayed.
 class UserAdapter(private val context: Context, private val userList: ArrayList<User>):
     RecyclerView.Adapter<UserAdapter.UserViewHolder>() {
-
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserViewHolder {

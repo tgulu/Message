@@ -10,7 +10,7 @@ import com.example.messengerapplication.model.Message
 import com.example.messengerapplication.R
 import com.google.firebase.auth.FirebaseAuth
 
-
+//providing the view with data in the format it needs to be displayed.
 class MessageAdapter(private val context: Context, private val messageList: ArrayList<Message>) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
@@ -61,12 +61,13 @@ class MessageAdapter(private val context: Context, private val messageList: Arra
         return messageList.size
     }
 
-
+    //sends data to the user1 message text-box
     inner class ReceiveViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val textView = itemView.findViewById<TextView>(R.id.text_receive_message)!!
         val messageTime = itemView.findViewById<TextView>(R.id.messageTime)!!
     }
 
+    //sends data to the user2 message text-box
         inner class SentViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val textView = itemView.findViewById<TextView>(R.id.text_sent_message)!!
         val messageTime = itemView.findViewById<TextView>(R.id.messageTime)!!
