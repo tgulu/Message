@@ -10,13 +10,14 @@ import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.messengerapplication.adapter.UserAdapter
 import com.example.messengerapplication.databinding.ActivityMainBinding
+import com.example.messengerapplication.model.User
+import com.example.messengerapplication.ui.LoginActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    //private lateinit var userRecyclerView: RecyclerView
     private val userList: ArrayList<User> = ArrayList()
     private lateinit var userAdapter: UserAdapter
     private lateinit var mAuth: FirebaseAuth

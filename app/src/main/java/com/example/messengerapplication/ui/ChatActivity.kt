@@ -1,4 +1,4 @@
-package com.example.messengerapplication
+package com.example.messengerapplication.ui
 
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
@@ -9,6 +9,7 @@ import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.messengerapplication.adapter.MessageAdapter
 import com.example.messengerapplication.databinding.ActivityChatBinding
+import com.example.messengerapplication.model.Message
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import java.text.SimpleDateFormat
@@ -31,10 +32,10 @@ class ChatActivity : AppCompatActivity() {
         binding = ActivityChatBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        initViews()
+        initialsViews()
 
     }
-    private fun initViews() {
+    private fun initialsViews() {
         mDbaseRef = FirebaseDatabase.getInstance().reference
         val name = intent.getStringExtra("name")
         val receiverUid = intent.getStringExtra("uid")
@@ -67,6 +68,7 @@ class ChatActivity : AppCompatActivity() {
 
                 override fun onCancelled(error: DatabaseError) {}
             })
+
 
         binding.messageBox.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}

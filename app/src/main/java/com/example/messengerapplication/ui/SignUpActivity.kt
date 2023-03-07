@@ -1,10 +1,12 @@
-package com.example.messengerapplication
+package com.example.messengerapplication.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.example.messengerapplication.MainActivity
 import com.example.messengerapplication.databinding.ActivitySignUpBinding
+import com.example.messengerapplication.model.User
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -30,7 +32,7 @@ class SignUpActivity : AppCompatActivity() {
         supportActionBar?.hide()
         binding.btnSignUp.setOnClickListener {
             val email = binding.editEmail.text.toString().trim()
-            val name = binding.editName.text.toString().trim()
+            val name = binding.editName.text.toString().trim().capitalize()
             val password = binding.editPassword.text.toString().trim()
             if (name.isNotEmpty() && email.isNotEmpty() && password.isNotEmpty()) {
                 signUp(name, email, password)

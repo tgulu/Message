@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
-import com.example.messengerapplication.Message
+import com.example.messengerapplication.model.Message
 import com.example.messengerapplication.R
 import com.google.firebase.auth.FirebaseAuth
 

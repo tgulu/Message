@@ -1,9 +1,10 @@
-package com.example.messengerapplication
+package com.example.messengerapplication.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.example.messengerapplication.MainActivity
 import com.example.messengerapplication.databinding.ActivityLoginBinding
 import com.google.firebase.auth.FirebaseAuth
 
@@ -23,7 +24,7 @@ class LoginActivity : AppCompatActivity() {
         mAuth = FirebaseAuth.getInstance()
         supportActionBar?.hide()
         binding.btnSignUp.setOnClickListener {
-            val intent = Intent(this@LoginActivity,SignUpActivity::class.java)
+            val intent = Intent(this@LoginActivity, SignUpActivity::class.java)
             startActivity(intent)
         }
         binding.btnLogin.setOnClickListener {
