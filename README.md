@@ -17,10 +17,8 @@ in real-time using Firebase realtime database
 
 ## Screenshots
 
-![login_page!](photos/login_page.png)
-![sign_up_page!](photos/sign_up_page.png)
-![sign_up_user!](photos/sign_up_user.png)
-![users!](photos/users.png)
+![login_page!](photos/login_page.png) ![sign_up_page!](photos/sign_up_page.png)
+![sign_up_user!](photos/sign_up_user.png) ![users!](photos/users.png)
 ![user_convo!](photos/user_convo.png)
 
 
