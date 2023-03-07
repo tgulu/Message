@@ -31,6 +31,7 @@ class MainActivity : AppCompatActivity() {
         initialsViews()
     }
 
+    //set up Firebase and the user adapter
     private fun initialsViews() {
         mAuth = FirebaseAuth.getInstance()
         mDatabaseRef = FirebaseDatabase.getInstance().reference

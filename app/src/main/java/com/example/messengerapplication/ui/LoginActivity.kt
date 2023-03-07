@@ -38,6 +38,7 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
+    //checks to see if user data is stored in the database to let them login
     private fun login(email: String, password: String){
         mAuth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
